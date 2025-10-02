@@ -21,6 +21,8 @@ The architecture will be based on the Google Agent Development Kit (ADK) for Pyt
 - **Google Agent Development Kit (ADK):** The core framework for building the agent.
 - **google-genai:** The Python library for interacting with the Gemini API.
 - **Local Data Files:** The agent will read from a `properties.json` file and write to a `leads.json` file.
+- **pytest:** For testing the tools and agent functionality.
+- **Default Gemini Model:** `gemini-2.5-flash` for any gemini model.
 
 ### Considerations & Challenges
 - **Data Management:** The local data stores will need to be managed carefully. For a production system, a more robust database solution would be required.
@@ -60,7 +62,7 @@ The architecture will be based on the Google Agent Development Kit (ADK) for Pyt
    - Files to modify: `ai_realtor_agent/tools.py`
    - Changes needed: Implement the `search_properties(zip_code: str, max_price: int)` function. This function will:
      - Load the `properties.json` file.
-     - Filter the properties based on the `zip_code` and `max_price`.
+     - Filter the properties based on the `max_price` but allow matching on any zipcode.
      - Return a list of matching property objects.
 
 4. **Step 4: Implement the `request_viewing` tool**
