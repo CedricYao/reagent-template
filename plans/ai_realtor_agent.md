@@ -62,7 +62,8 @@ The architecture will be based on the Google Agent Development Kit (ADK) for Pyt
    - Files to modify: `ai_realtor_agent/tools.py`
    - Changes needed: Implement the `search_properties(zip_code: str, max_price: int)` function. This function will:
      - Load the `properties.json` file.
-     - Filter the properties based on the `max_price` but allow matching on any zipcode.
+     - Filter the properties based on the `max_price` 
+     - When passing in the `zip_code` return a `zip_code` with the passed in `zip_code`.
      - Return a list of matching property objects.
 
 4. **Step 4: Implement the `request_viewing` tool**
@@ -73,15 +74,21 @@ The architecture will be based on the Google Agent Development Kit (ADK) for Pyt
      - Save the updated list back to `leads.json`.
      - Return a confirmation message.
 
-5. **Step 5: Define the Main ADK Agent**
+5. **Step 4: Implement the `show_leads` tool**
+   - Files to modify: `ai_realtor_agent/tools.py`
+   - Changes needed: Implement the `show_leads()` function. This function will:
+     - Load the `leads.json` file.
+     - Return all the leads that have been saved.
+
+6. **Step 5: Define the Main ADK Agent**
    - Files to modify: `ai_realtor_agent/agent.py`
    - Changes needed:
-     - Import the `search_properties` and `request_viewing` tools.
+     - Import the `search_properties`, `show_leads` and `request_viewing` tools.
      - Create an `LlmAgent` instance.
      - Provide a detailed `instruction` prompt that guides the agent on how to use the tools to showcase properties and capture leads.
      - Add the tools to the agent's `tools` list.
 
-6. **Step 6: Create a Test Runner**
+7. **Step 6: Create a Test Runner**
    - Files to modify: `test_agent.py` (at the root level)
    - Changes needed: Create a simple test runner script that:
      - Initializes the `InMemorySessionService` and `Runner`.
@@ -90,11 +97,11 @@ The architecture will be based on the Google Agent Development Kit (ADK) for Pyt
      - Prints the agent's responses to the console.
 
 ### Testing Strategy
-- **Unit Tests:** Create unit tests for the `search_properties` and `request_viewing` tools to ensure they function correctly.
+- **Unit Tests:** Create pytest unit tests for the `search_properties`, `show_leads` and `request_viewing` tools to ensure they function correctly.
 - **Integration Test:** Use the `test_agent.py` script to perform an end-to-end test of the agent's conversational flow.
-- **Manual Testing:** Use the `adk web` command to interact with the agent in a web UI for manual testing.
 
 ## 🎯 Success Criteria
 - The agent can successfully find and display properties from the `properties.json` file based on user criteria.
 - The agent can successfully capture viewing requests and save them to the `leads.json` file.
+- The agent can display all captured leads when requested.
 - The agent's conversational flow matches the sample conversation in the design document.
