@@ -20,7 +20,18 @@ When asking for `google-adk` python library do not use `context7` MCP tools, ins
 * Seek stable landing points and create a git commit when the application complies and tests pass before moving on to the next functional change.
 
 ### Project creation
+*   ## Create & activate virtual environment
+    
+    We recommend creating a virtual Python environment using
+    [venv](https://docs.python.org/3/library/venv.html):
+    
+    ```shell
+    python -m venv .venv
+    ```
 * Remove any unused boiler plate code generated from new project creation by the frameworks.
+* Create a `README.md` file that explains the purpose of the project, how to set up the development environment, and how to run tests.
+* use `pip` for package management.
+* Use a `requirements.txt` file to list all dependencies.
 
 ### Test Driven Development
 

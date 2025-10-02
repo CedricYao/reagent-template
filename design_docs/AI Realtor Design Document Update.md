@@ -24,9 +24,10 @@ The primary goal is to provide an engaging, interactive property showcase that e
 ### **3\. Technical Architecture**
 
 The system is designed around the Google ADK, which orchestrates interactions between the user, the Gemini LLM, and various local tools.
-
+* **Use `pip` to install and manage dependencies.** 
 * **Agent Core (Google Agent Development Kit for Python):** The central application logic built using the ADK framework. It manages the conversation state and dispatches tasks to the appropriate tools.  
 * **LLM Engine (Google Gemini API):** The agent will use a Gemini model accessed via the **`google-genai` Python library**. The LLM's role is to interpret user requests and determine which tool to call with the correct parameters.  
+* **Python testing (pytest):** Use the `pytest` test suite to create a suite of unit and integration tests to ensure the agent and its tools function as expected.
 * **Internal Data Store:**  
   * **Property Catalog:** A local JSON file or an in-memory database containing a curated list of property objects (e.g., address, price, bedrooms, image URL, property ID). This is the single source of truth for the property showcase.  
   * **Lead Capture Log:** A simple database or CSV file where viewing requests (property ID, user name, contact info, requested time) are logged for realtor follow-up.  
