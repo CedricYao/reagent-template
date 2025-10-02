@@ -63,8 +63,7 @@ The architecture will be based on the Google Agent Development Kit (ADK) for Pyt
    - Files to modify: `ai_realtor_agent/tools.py`
    - Changes needed: Implement the `search_properties(zip_code: str, max_price: int)` function. This function will:
      - Load the `properties.json` file.
-     - Filter the properties based on the `max_price` 
-     - When passing in the `zip_code` return a `zip_code` with the passed in `zip_code`.
+     - Filter the properties based on the `max_price` and `zip_code`
      - Return a list of matching property objects.
 
 4. **Step 4: Implement the `request_viewing` tool**
