@@ -27,12 +27,13 @@ The system is designed around the Google ADK, which orchestrates interactions be
 * **Use `pip` to install and manage dependencies within a `requirements.txt` file** 
 * **To Reference Vertex AI and Gemini, create a env.copy file with the following content: Prompt the user for the correct project ID and location**
   ```
-  GGOOGLE_GENAI_USE_VERTEXAI=TRUE
+  GOOGLE_GENAI_USE_VERTEXAI=TRUE
   GOOGLE_CLOUD_PROJECT=YOUR_PROJECT_ID
   GOOGLE_CLOUD_LOCATION=LOCATION
   ```
 * **Agent Core (Google Agent Development Kit for Python):** The central application logic built using the ADK framework. It manages the conversation state and dispatches tasks to the appropriate tools.  
 * **LLM Engine (Google Gemini API):** The agent will use a Gemini model accessed via the **`google-genai` Python library**. The LLM's role is to interpret user requests and determine which tool to call with the correct parameters.  
+* **Default Gemini Model:** `gemini-2.5-flash` for any gemini model.
 * **Python testing (pytest):** Use the `pytest` library to create a suite of unit and integration tests to ensure the agent and its tools function as expected.
 * **Internal Data Store:**  
   * **Property Catalog:** A local JSON file or an in-memory database containing a curated list of property objects (e.g., address, price, bedrooms, image URL, property ID). This is the single source of truth for the property showcase.  
