@@ -1501,7 +1501,7 @@ export GOOGLE_GENAI_USE_VERTEXAI=FALSE
     # different availability or quota limitations.
     agent_gemini_pro = LlmAgent(
         # Use the latest generally available Pro model identifier
-        model="gemini-2.5-pro-preview-03-25",
+        model="gemini-2.5-pro",
         name="gemini_pro_agent",
         instruction="You are a powerful and knowledgeable Gemini assistant.",
         # ... other agent parameters
@@ -20512,7 +20512,7 @@ result.",
 },
 "BaseLlm": {
 "description": "The BaseLLM class.\n\nAttributes:\n
-model: The name of the LLM, e.g. gemini-1.5-flash or gemini-1.5-flash-001.",
+model: The name of the LLM, e.g. gemini-2.5-flash.",
 "properties": {
 "model": {
 "title": "Model",
@@ -21778,7 +21778,7 @@ model.\n
 }
 ],
 "default": null,
-"description": "The model name to use. Only the public LLM models are accepted. e.g. 'gemini-1.5-pro-001'.",
+"description": "The model name to use. Only the public LLM models are accepted. e.g. 'gemini-2.5-flash'.",
 "title": "Modelname"
 }
 },
@@ -22301,7 +22301,7 @@ model.\n
 }
 ],
 "default": null,
-"description": "Optional. The model name used for ranking. Format: `gemini-1.5-pro`",
+"description": "Optional. The model name used for ranking. Format: `gemini-2.5-flash`",
 "title": "Modelname"
 }
 },
@@ -28318,11 +28318,11 @@ pydantic model google.adk.models.BaseLlm¶
 Bases: BaseModel
 The BaseLLM class.
 model¶
-The name of the LLM, e.g. gemini-1.5-flash or gemini-1.5-flash-001.
+The name of the LLM, e.g. gemini-2.5-flash.
 Show JSON schema{
 "title": "BaseLlm",
 "description": "The BaseLLM class.\n\nAttributes:\n
-model: The name of the LLM, e.g. gemini-1.5-flash or gemini-1.5-flash-001.",
+model: The name of the LLM, e.g. gemini-2.5-flash.",
 "type": "object",
 "properties": {
 "model": {
@@ -28337,7 +28337,7 @@ model: The name of the LLM, e.g. gemini-1.5-flash or gemini-1.5-flash-001.",
 Fields:
 model (str)
 field model: str [Required]¶
-The name of the LLM, e.g. gemini-1.5-flash or gemini-1.5-flash-001.
+The name of the LLM, e.g. gemini-2.5-flash.
 classmethod supported_models()¶
 Returns a list of supported models in regex for LlmRegistry.
 Return type:
@@ -28375,7 +28375,7 @@ model: The name of the Gemini model.",
 "type": "object",
 "properties": {
 "model": {
-"default": "gemini-1.5-flash",
+"default": "gemini-2.5-flash",
 "title": "Model",
 "type": "string"
 }
@@ -28383,8 +28383,8 @@ model: The name of the Gemini model.",
 }
 Fields:
 model (str)
-field model: str = 'gemini-1.5-flash'¶
-The name of the LLM, e.g. gemini-1.5-flash or gemini-1.5-flash-001.
+field model: str = 'gemini-2.5-flash'¶
+The name of the LLM, e.g. gemini-2.5-flash.
 static supported_models()¶
 Provides the list of supported models.
 Return type:
