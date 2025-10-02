@@ -5,6 +5,7 @@
 - [ ] Create and populate the property catalog data store.
 - [ ] Implement the `search_properties` tool.
 - [ ] Implement the `request_viewing` tool.
+- [ ] Implement the `show_leads` tool.
 - [ ] Define the main ADK agent.
 - [ ] Create a test runner to verify the agent's functionality.
 - [ ] Final Review and Testing.
