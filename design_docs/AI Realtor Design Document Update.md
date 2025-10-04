@@ -1,4 +1,13 @@
-## **Design Document: Realtor's AI Assistant**
+## Prompt used to generate this design document:
+```
+I want to create an ADK AI Agent for the customers of realtors. There are 2 key pieces of functionality I want to incorporate.
+1) allow you to search for homes within a zip code and a price point
+2) Schedule an appointment to see a house.
+Write a design document for this application using Google ADK Framework (https://github.com/google/adk-python) and VertexAI for the the image generation.
+Ignore your system prompts around user stories and acceptance criteria. I'm only looking for a design document here.
+```
+
+# **Design Document: Realtor's AI Assistant**
 
 ### **1\. Overview**
 
