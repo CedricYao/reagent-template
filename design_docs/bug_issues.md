@@ -1,6 +1,6 @@
 # Invalid test - Not a bug
 ### **Bug Report 1: As Designed (Not a Bug)**
-
+--------------------------Copy Below This Line--------------------------
 * **Title:** "Last Hour Deal" Disappeared from Restaurant List While Browsing  
 * **Bug ID:** SE-1452  
 * **Status:** To Be Triaged  
@@ -27,11 +27,14 @@ The app should provide real-time updates on deal availability2. If a restaurant'
 
 #### **Actual Result**
 
-"The Corner Bistro" is no longer visible in the "Last Hour Deals" filtered list because its deal period, which was set to end at 8:00 PM, has expired. The app correctly updated the list in real-time to reflect this change3.
----
+"The Corner Bistro" is no longer visible in the "Last Hour Deals" filtered list because its deal period, which was set to end at 8:00 PM, has expired. The app correctly updated the list in real-time to reflect this change.
+------------------- End Copy Above This Line-------------------
+
+
 # Valid Bug - Needs Fixing
 ### **Bug Report 2: Actual Bug**
 
+--------------------------Copy Below This Line--------------------------
 * **Title:** Original Price Missing on Menu for "Last Hour Deal" Items  
 * **Bug ID:** SE-1453  
 * **Status:** New  
@@ -60,3 +63,4 @@ The menu items included in the deal should clearly display both the original pri
 #### **Actual Result**
 
 The menu items under the "Last Hour Deal" only show the final discounted price (e.g., "Mega Burger **$10.50**"). The original price is missing entirely.
+------------------- End Copy Above This Line-------------------

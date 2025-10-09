@@ -14,7 +14,7 @@ Analyze the following bug report against the provided Product Requirements Docum
 Determine if the bug is a valid deviation from the PRD.
 
 Based on your analysis, provide a JSON object with the following fields:
-- "verdict": (string) "Valid" or "Invalid".
+- "verdict": (string) "Is a Bug" or "As Designed".
 - "justification": (string) A detailed explanation for your verdict.
 - "evidence": (string) Specific quotes or sections from the PRD and bug report that support your justification.
 """
