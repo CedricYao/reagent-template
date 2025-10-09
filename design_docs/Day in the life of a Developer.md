@@ -49,5 +49,5 @@ As a user of the "SuperEats" app, I want to easily identify restaurants that off
   * **Real-Time Updates**: The app should be updated dynamically as the availability of deals change.  
 * **Database Integration:** The user story and acceptance criteria are directly related to the database schema and the customer journey. The `operating_hours` field in the `Restaurants` table can be used to identify if the restaurant is currently offering "Last Hour Deals". Also, the `RestaurantDiscounts` table stores the relevant discount information and start/end times.  
 * **User Interface**: The user interface should be intuitive, allowing for easy browsing and filtering of deals.  
-* **Alignment with Uber Values**: The feature aligns with Uber's values by providing affordable meal options (Trip Obsessed, Build with Heart) and reducing food waste (Do the Right Thing).
+* **Alignment with SuperEats Values**: The feature aligns with SuperEats's values by providing affordable meal options (Trip Obsessed, Build with Heart) and reducing food waste (Do the Right Thing).
 

@@ -1,12 +1,11 @@
 # Feature Implementation Plan: Text Input QA Agent
 
 ## 📋 Todo Checklist
-- [ ] Create the project structure for the QA agent.
-- [ ] Implement the `analyze_bug` tool.
-- [ ] Implement the QA Agent.
-- [ ] Implement unit and integration tests.
-- [ ] Create `requirements.txt` and `README.md`.
-- [ ] Final Review and Testing
+- [x] ~~Create the project structure for the QA agent.~~ ✅ Implemented
+- [x] ~~Implement the `analyze_bug` tool.~~ ✅ Implemented
+- [x] ~~Implement the QA Agent.~~ ✅ Implemented
+- [x] ~~Implement unit and integration tests.~~ ✅ Implemented
+- [x] ~~Final Review and Testing~~ ✅ Implemented
 
 ## 🔍 Analysis & Investigation
 
@@ -44,7 +43,8 @@ The primary dependency will be the `google-adk` library. The agent will not have
    - Files to modify: `agents_gallery/qa_agent/agent.py`
    - Changes needed:
      - Implement the `analyze_bug(prd_content: str, bug_report: str) -> dict` function.
-     - Inside the function, create a detailed prompt that instructs the LLM to compare the `prd_content` and `bug_report` and return a JSON object with the `verdict`, `justification`, and `evidence`.
+     - Inside the function, create a detailed prompt that instructs `gemini-2.5-pro` using VertexAI and the `google-genai` library to compare the `prd_content` and `bug_report` and return a JSON object with the `verdict`, `justification`, and `evidence`.
+     - The environment variables for `google-genai` library will be loaded from `.env` file and a template are in the `.env.copy` file.
      - Use the `google.adk.tools.FunctionTool` to wrap the `analyze_bug` function.
 
 3. **Step 3: Implement the QA Agent**

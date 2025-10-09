@@ -1,7 +1,7 @@
 ### Code Generation Rules
 Always use context7 when I need code generation, setup, configuration, planning steps, or library/API documentation. This means you should automatically use the Context7 MCP tools to resolve library id and get library docs without me having to explicitly ask.
 
-When asking for the `google-genai` python library always resolve to `https://context7.com/googleapis/python-genai` and use the `context7` MCP tools to get the library documentation.
+When you impelement VertexAI to make a call to Gemini use the `google-genai` python library always resolve to `https://context7.com/googleapis/python-genai` and use the `context7` MCP tools to get the library documentation.
 
 When asking for `google-adk` python library do not use `context7` MCP tools, instead use the existing context loaded within the GEMINI.MD file.
 
